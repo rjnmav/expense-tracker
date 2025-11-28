@@ -51,3 +51,46 @@ export const getCategoryColor = (category) => {
   };
   return colors[category.toLowerCase()] || colors.other;
 };
+
+export const getDateRange = (filterType) => {
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  let start = null;
+  let end = null;
+
+  switch (filterType) {
+    case 'this_week':
+      start = new Date(today);
+      start.setDate(today.getDate() - today.getDay()); // Sunday
+      end = new Date(today);
+      end.setDate(today.getDate() + (6 - today.getDay())); // Saturday
+      break;
+    case 'last_week':
+      start = new Date(today);
+      start.setDate(today.getDate() - today.getDay() - 7);
+      end = new Date(start);
+      end.setDate(start.getDate() + 6);
+      break;
+    case 'this_month':
+      start = new Date(today.getFullYear(), today.getMonth(), 1);
+      end = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+      break;
+    case 'last_month':
+      start = new Date(today.getFullYear(), today.getMonth() - 1, 1);
+      end = new Date(today.getFullYear(), today.getMonth(), 0);
+      break;
+    case 'this_year':
+      start = new Date(today.getFullYear(), 0, 1);
+      end = new Date(today.getFullYear(), 11, 31);
+      break;
+    default:
+      return null;
+  }
+
+  // Set end of day for end date
+  if (end) {
+    end.setHours(23, 59, 59, 999);
+  }
+
+  return { start, end };
+};
