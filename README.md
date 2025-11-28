@@ -38,14 +38,6 @@ A modern, full-stack personal expense tracker web application with MongoDB datab
 - **Top Spending Categories**: Ranked list with percentages
 - **Detailed Reports**: Transaction counts and trends
 
-### 🎨 Modern UI/UX
-- Clean, elegant, and engaging design
-- Fully responsive (mobile, tablet, desktop)
-- Smooth animations and transitions
-- Intuitive navigation
-- Toast notifications for user feedback
-- Loading states and error handling
-
 ### 🔐 Authentication
 - Secure user registration and login
 - JWT-based authentication
@@ -169,145 +161,6 @@ Open your browser and navigate to:
 http://localhost:3000
 ```
 
-## 📱 Usage Guide
-
-### Getting Started
-
-1. **Register an Account**
-   - Click "Sign up" on the login page
-   - Enter your name, email, and password
-   - Click "Create Account"
-
-2. **Create Your First Account**
-   - Navigate to "Accounts" page
-   - Click "Add Account"
-   - Choose account type, name, and initial balance
-   - Select a color theme
-   - Click "Create"
-
-3. **Add Transactions**
-   - Go to "Transactions" page
-   - Click "Add Transaction"
-   - Select type (Income/Expense/Transfer)
-   - Choose category, amount, account, and date
-   - Add optional description
-   - Click "Create"
-
-4. **View Analytics**
-   - Navigate to "Analytics" page
-   - Select time period (week/month/year)
-   - View charts and statistics
-   - Analyze spending patterns
-
-### Categories
-
-**Expense Categories:**
-- Food & Dining
-- Transportation
-- Entertainment
-- Utilities
-- Healthcare
-- Shopping
-- Education
-- Travel
-- Insurance
-- Rent
-- Groceries
-- Personal Care
-- Gifts
-- Other
-
-**Income Categories:**
-- Salary
-- Freelance
-- Business
-- Investment
-- Rental Income
-- Gift
-- Refund
-- Other
-
-## 🗂️ Project Structure
-
-```
-expense-tracker/
-├── backend/
-│   ├── config/
-│   │   └── db.js                 # Database configuration
-│   ├── middleware/
-│   │   ├── auth.js               # Authentication middleware
-│   │   └── errorHandler.js       # Error handling
-│   ├── models/
-│   │   ├── User.js               # User model
-│   │   ├── Account.js            # Account model
-│   │   └── Transaction.js        # Transaction model
-│   ├── routes/
-│   │   ├── auth.js               # Authentication routes
-│   │   ├── accounts.js           # Account routes
-│   │   ├── transactions.js       # Transaction routes
-│   │   └── analytics.js          # Analytics routes
-│   ├── .env.example              # Environment variables template
-│   ├── package.json
-│   └── server.js                 # Entry point
-│
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   │   └── Layout.jsx        # Main layout component
-│   │   ├── context/
-│   │   │   └── AuthContext.jsx   # Authentication context
-│   │   ├── pages/
-│   │   │   ├── Login.jsx         # Login page
-│   │   │   ├── Register.jsx      # Register page
-│   │   │   ├── Dashboard.jsx     # Dashboard page
-│   │   │   ├── Transactions.jsx  # Transactions page
-│   │   │   ├── Accounts.jsx      # Accounts page
-│   │   │   └── Analytics.jsx     # Analytics page
-│   │   ├── utils/
-│   │   │   ├── api.js            # API calls
-│   │   │   ├── constants.js      # Constants
-│   │   │   └── helpers.js        # Helper functions
-│   │   ├── App.jsx               # App component
-│   │   ├── main.jsx              # Entry point
-│   │   └── index.css             # Global styles
-│   ├── index.html
-│   ├── package.json
-│   ├── tailwind.config.js
-│   ├── postcss.config.js
-│   └── vite.config.js
-│
-├── .github/
-│   └── copilot-instructions.md   # Project setup instructions
-└── README.md                     # This file
-```
-
-## 🔌 API Endpoints
-
-### Authentication
-- `POST /api/auth/register` - Register new user
-- `POST /api/auth/login` - Login user
-
-### Accounts
-- `GET /api/accounts` - Get all accounts
-- `GET /api/accounts/:id` - Get single account
-- `POST /api/accounts` - Create account
-- `PUT /api/accounts/:id` - Update account
-- `DELETE /api/accounts/:id` - Delete account
-
-### Transactions
-- `GET /api/transactions` - Get all transactions (with filters)
-- `GET /api/transactions/:id` - Get single transaction
-- `POST /api/transactions` - Create transaction
-- `PUT /api/transactions/:id` - Update transaction
-- `DELETE /api/transactions/:id` - Delete transaction
-
-### Analytics
-- `GET /api/analytics/summary` - Get summary statistics
-- `GET /api/analytics/trends` - Get trend data
-- `GET /api/analytics/categories` - Get category breakdown
-- `GET /api/analytics/accounts` - Get account statistics
-
 ## 🧪 Testing
 
 ### Test the Backend API
@@ -379,30 +232,6 @@ rm -rf node_modules package-lock.json
 npm install
 ```
 
-## 🚀 Deployment
-
-### Backend (Heroku example)
-```bash
-cd backend
-heroku create your-app-name
-heroku config:set MONGODB_URI=your_mongodb_atlas_uri
-heroku config:set JWT_SECRET=your_jwt_secret
-git push heroku main
-```
-
-### Frontend (Vercel example)
-```bash
-cd frontend
-npm run build
-vercel --prod
-```
-
-### Environment Variables for Production
-Update your production environment with:
-- `MONGODB_URI` - MongoDB Atlas connection string
-- `JWT_SECRET` - Strong random secret
-- `NODE_ENV=production`
-
 ## 📝 License
 
 This project is open source and available under the [MIT License](LICENSE).
@@ -413,7 +242,7 @@ Contributions, issues, and feature requests are welcome!
 
 ## 👨‍💻 Author
 
-Your Name - [Your GitHub](https://github.com/yourusername)
+Rajan Panchal - [rjnmav](https://github.com/rjnmav)
 
 ## 🌟 Show Your Support
 
@@ -421,7 +250,7 @@ Give a ⭐️ if this project helped you!
 
 ## 📧 Contact
 
-For questions or feedback, please reach out at: your.email@example.com
+For questions or feedback, please reach out at: rajanp1743@gmail.com
 
 ---
 
